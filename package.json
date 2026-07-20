@@ -1,38 +1,31 @@
 {
-  "name": "titanbot",
-  "version": "2.1.0",
-  "description": "Modular Ultimate Community Bot by Touchpoint Support",
-  "main": "src/app.js",
+  "name": "sad-bot-ticket-system",
+  "version": "2.0.0",
+  "description": "Advanced Discord Ticket Bot with Dashboard",
   "type": "module",
+  "main": "index.js",
   "scripts": {
-    "start": "node src/app.js",
-    "migrate": "node scripts/migrate.js apply",
-    "migrate:check": "node scripts/migrate.js check",
-    "migrate:status": "node scripts/migrate.js status",
-    "migrate:keys": "node scripts/migrate-keys.js",
-    "migrate:keys:dry": "node scripts/migrate-keys.js --dry-run",
-    "backup:db": "node scripts/backup.js",
-    "restore:db": "node scripts/restore.js",
-    "backup:drill": "node scripts/restore-drill.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "deploy": "node deploy-commands.js"
   },
+  "keywords": [
+    "discord",
+    "bot",
+    "tickets",
+    "dashboard"
+  ],
+  "author": "Sad889770",
+  "license": "MIT",
   "dependencies": {
-    "@discordjs/rest": "^2.6.1",
-    "axios": "^1.15.2",
-    "discord.js": "^14.26.4",
-    "dotenv": "^17.2.3",
-    "express": "^5.1.0",
-    "node-cron": "^4.2.1",
-    "pg": "^8.11.3",
-    "winston": "^3.19.0",
-    "winston-daily-rotate-file": "^5.0.0",
-    "zod": "^3.25.76",
-    "riffy": "1.0.12"
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5",
+    "mongoose": "^8.2.3",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "axios": "^1.7.2"
   },
-  "engines": {
-    "node": ">=20.10.0"
-  },
-  "overrides": {
-    "form-data": "^4.0.6",
-    "undici": "^6.27.0"
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }
